@@ -10,6 +10,7 @@ Description: Designing surveys require relevant datasets to be used as basis for
     clusters, map datasets for spatial sampling, and previous survey datasets that
     can be used for estimating indicator variance and design effects. This package
     contains relevant datasets for use in designing surveys in Somalia.
+Depends: R (>= 2.10)
 License: CC0
 Encoding: UTF-8
 LazyData: true
