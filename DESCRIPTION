@@ -1,0 +1,15 @@
+Package: somalia
+Type: Package
+Title: Datasets for Use in Designing Surveys in Somalia
+Version: 0.1.0
+Authors@R: person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
+                  email = "ernest@guevarra.io", role = c("aut", "cre"))
+Description: Designing surveys require relevant datasets to be used as basis for
+    sample size calculations, sampling design, survey planning/logistics and
+    survey implementation. These include datasets on population, lists of sampling
+    clusters, map datasets for spatial sampling, and previous survey datasets that
+    can be used for estimating indicator variance and design effects. This package
+    contains relevant datasets for use in designing surveys in Somalia.
+License: CC0
+Encoding: UTF-8
+LazyData: true
