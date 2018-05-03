@@ -12,7 +12,7 @@
 #' contains relevant datasets for use in designing surveys in Somalia.
 #'
 #' @docType package
-#' @name somaliavillages
+#' @name somalia
 #'
 #
 ################################################################################
@@ -21,7 +21,7 @@ NULL
 
 ################################################################################
 #
-#' somaliavillages
+#' villages
 #'
 #' List of villages in Somalia with corresponding GPS coordinates.
 #'
@@ -41,5 +41,5 @@ NULL
 #' @source UNICEF Somalia
 #
 ################################################################################
-"somaliavillages"
+"villages"
 
