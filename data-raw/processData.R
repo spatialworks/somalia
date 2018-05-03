@@ -65,6 +65,8 @@ somaliavillages <- villagelist[, c("admin1pcode", "admin1id", "admin1name",
 somaliavillages$latitude  <- as.numeric(somaliavillages$latitude)
 somaliavillages$longitude <- as.numeric(somaliavillages$longitude)
 
-devtools::use_data(somaliavillages)
+villages <- somaliavillages
+
+devtools::use_data(villages)
 
 
