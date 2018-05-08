@@ -6,6 +6,7 @@
 
 library(readxl)
 library(stringr)
+library(ckanr)
 
 ################################################################################
 #
@@ -68,5 +69,40 @@ somaliavillages$longitude <- as.numeric(somaliavillages$longitude)
 villages <- somaliavillages
 
 devtools::use_data(villages)
+
+
+################################################################################
+#
+# Pull data Humanitarian Data exchange: https://data.humdata.org using ckanr
+#
+################################################################################
+#
+# Setup ckan
+#
+ckanr::ckanr_setup(url = "https://data.humdata.org")
+#
+# Get the available packages for Somalia
+#
+packages <- ckanr::package_list()
+
+resources <- ckanr::resource_show()
+
+ckanr::resource_search(q = "*:*")
+
+tab <- ckanr::group_show(id = "som")
+
+
+x <- ckanr::package_search(q = "*:*")
+
+y <- ckanr::package_show(x$results[[1]])
+
+z <- ckanr::resource_show(y$resources[[1]]$id)
+
+
+som <- ckanr::group_show(id = "som")
+
+x <- ckanr::package_show("administrative-regions-of-somalia")
+
+y <- ckanr::resource_show(x$resources[[1]]$id)
 
 
