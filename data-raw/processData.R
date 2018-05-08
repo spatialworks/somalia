@@ -106,3 +106,28 @@ x <- ckanr::package_show("administrative-regions-of-somalia")
 y <- ckanr::resource_show(x$resources[[1]]$id)
 
 
+
+################################################################################
+#
+# Livelihood zones maps
+#
+################################################################################
+#
+# Libraries for mapping
+#
+library(leaflet)
+library(rgdal)
+library(rgeos)
+library(raster)
+library(maps)
+#
+# Read map
+#
+somaliaLHZ2015 <- readOGR(dsn = "data-raw/SO_LHZ_2015",
+                          layer = "SO_LHZ_2015",
+                          verbose = FALSE)
+#
+#
+#
+devtools::use_data(somaliaLHZ2015, overwrite = TRUE)
+
