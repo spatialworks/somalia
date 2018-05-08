@@ -123,11 +123,11 @@ library(maps)
 #
 # Read map
 #
-somaliaLHZ2015 <- readOGR(dsn = "data-raw/SO_LHZ_2015",
-                          layer = "SO_LHZ_2015",
-                          verbose = FALSE)
+lhz2015 <- readOGR(dsn = "data-raw/SO_LHZ_2015",
+                   layer = "SO_LHZ_2015",
+                   verbose = FALSE)
 #
 #
 #
-devtools::use_data(somaliaLHZ2015, overwrite = TRUE)
+devtools::use_data(lhz2015, overwrite = TRUE)
 
