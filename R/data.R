@@ -43,3 +43,25 @@ NULL
 ################################################################################
 "villages"
 
+
+################################################################################
+#
+#' lhz2015
+#'
+#' Livelihood zones map of Somalia (2015)
+#'
+#' @format A SpatialPolygonsDataFrame with 19 features:
+#' \describe{
+#' \item{\code{COUNTRY}}{2-digit ISO country code (SO)}
+#' \item{\code{LZNUM}}{Livelihood zone unique identifier}
+#' \item{\code{LZCODE}}{Livelihood zone code}
+#' \item{\code{LZNAME}}{Livelihood name}
+#' \item{\code{CLASS}}{Livelihood zone classification}
+#' }
+#'
+#' @source FEWS-NET
+#'
+#
+################################################################################
+"lhz2015"
+
