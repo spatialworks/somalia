@@ -129,5 +129,10 @@ lhz2015 <- readOGR(dsn = "data-raw/SO_LHZ_2015",
 #
 #
 #
+lhz2015$LZNAME <- str_replace(lhz2015$LZNAME, " – ", " ")
+lhz2015$LZNAME <- str_replace(lhz2015$LZNAME, "  ", " ")
+#
+#
+#
 devtools::use_data(lhz2015, overwrite = TRUE)
 
