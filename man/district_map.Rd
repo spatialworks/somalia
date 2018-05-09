@@ -4,7 +4,24 @@
 \name{district_map}
 \alias{district_map}
 \title{district_map}
-\format{An object of class \code{SpatialPolygonsDataFrame} with 74 rows and 15 columns.}
+\format{A SpatialPolygonsDataFrame with 74 features:
+\describe{
+\item{\code{OBJECTID}}{Object identifier}
+\item{\code{admin2Name}}{Name of administrative level 2 (district)}
+\item{\code{admin2Pcode}}{Postal code of administrative level 2 (district)}
+\item{\code{admin2RefN}}{Reference name of administrative level 2 (district)}
+\item{\code{admin2AltN}}{Alternative name of administrative level 2 (district)}
+\item{\code{admin2Al_1}}{Alternative name of administrative level 2 (district)}
+\item{\code{admin1Name}}{Name of administrative level 1 (region)}
+\item{\code{admin1Pcod}}{Postal code of administrative level 1 (region)}
+\item{\code{admin0Name}}{Country (administrative level 0) name}
+\item{\code{admin0Pcod}}{Country (administrative level 1) code}
+\item{\code{date}}{Date map was poduced}
+\item{\code{validOn}}{Date map was last validated}
+\item{\code{validTo}}{Date map is valid up to}
+\item{\code{Shape_Leng}}{Lenght of shape}
+\item{\code{Shape_Area}}{Shape of area}
+}}
 \source{
 Humanitarian Data Exchange <https://data.humdata.org/dataset/somalia-administrative-boundaries>
 }
