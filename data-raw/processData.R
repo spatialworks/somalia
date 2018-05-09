@@ -14,7 +14,7 @@ library(ckanr)
 #
 ################################################################################
 
-villages <- readxl::read_excel(path = "data-raw/somaliavillages.XLSX", sheet = 1, col_types = "text")
+villages <- read_excel(path = "data-raw/somaliavillages.XLSX", sheet = 1, col_types = "text")
 villages <- data.frame(villages)
 
 ################################################################################
