@@ -66,9 +66,15 @@ somaliavillages <- villagelist[, c("admin1pcode", "admin1id", "admin1name",
 somaliavillages$latitude  <- as.numeric(somaliavillages$latitude)
 somaliavillages$longitude <- as.numeric(somaliavillages$longitude)
 
+#somaliavillages$latitude[somaliavillages$latitude < 10] <- somaliavillages$longitude[somaliavillages$latitude < 10]
+#somaliavillages$longitude[somaliavillages$longitude > 10] <- somaliavillages$latitude[somaliavillages$longitude > 10]
+
 villages <- somaliavillages
 
-devtools::use_data(villages)
+villages$longitude <- ifelse(villages$longitude > 40, villages$latitude, villages$longitude)
+villages$latitude  <- ifelse(villages$latitude < 10, villages$longitude, villages$latitude)
+
+devtools::use_data(villages, overwrite = TRUE)
 
 
 ################################################################################
