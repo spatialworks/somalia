@@ -65,3 +65,61 @@ NULL
 ################################################################################
 "lhz2015"
 
+
+################################################################################
+#
+#' region_map
+#'
+#' Administrative Level 1 (Region) map of Somalia
+#'
+#' @format A SpatialPolygonsDataFrame with 18 features:
+#' \describe{
+#' \item{\code{OBJECTID}}{Object identifier}
+#' \item{\code{admin1Name}}{Name of administrative level 1 (region)}
+#' \item{\code{admin1Pcod}}{Postal code of administrative level 1 (region)}
+#' \item{\code{admin1RefN}}{Reference name of administrative level 1 (region)}
+#' \item{\code{admin1AltN}}{Alternative name of administrative level 1 (region)}
+#' \item{\code{admin1Al_1}}{Alternative name of administrative level 1 (region)}
+#' \item{\code{admin0Name}}{Country (administrative level 0) name}
+#' \item{\code{admin0Pcod}}{Country (administrative level 1) code}
+#' \item{\code{date}}{Date map was poduced}
+#' \item{\code{validOn}}{Date map was last validated}
+#' \item{\code{validTo}}{Date map is valid up to}
+#' \item{\code{Shape_Leng}}{Lenght of shape}
+#' \item{\code{Shape_Area}}{Shape of area}
+#'
+#' @source Humanitarian Data Exchange <https://data.humdata.org/dataset/somalia-administrative-boundaries>
+#
+################################################################################
+"region_map"
+
+
+################################################################################
+#
+#' district_map
+#'
+#' Administrative Level 2 (District) map of Somalia
+#'
+#' @format A SpatialPolygonsDataFrame with 74 features:
+#' \describe{
+#' \item{\code{OBJECTID}}{Object identifier}
+#' \item{\code{admin2Name}}{Name of administrative level 2 (district)}
+#' \item{\code{admin2Pcode}}{Postal code of administrative level 2 (district)}
+#' \item{\code{admin2RefN}}{Reference name of administrative level 2 (district)}
+#' \item{\code{admin2AltN}}{Alternative name of administrative level 2 (district)}
+#' \item{\code{admin2Al_1}}{Alternative name of administrative level 2 (district)}
+#' \item{\code{admin1Name}}{Name of administrative level 1 (region)}
+#' \item{\code{admin1Pcod}}{Postal code of administrative level 1 (region)}
+#' \item{\code{admin0Name}}{Country (administrative level 0) name}
+#' \item{\code{admin0Pcod}}{Country (administrative level 1) code}
+#' \item{\code{date}}{Date map was poduced}
+#' \item{\code{validOn}}{Date map was last validated}
+#' \item{\code{validTo}}{Date map is valid up to}
+#' \item{\code{Shape_Leng}}{Lenght of shape}
+#' \item{\code{Shape_Area}}{Shape of area}
+#'
+#' @source Humanitarian Data Exchange <https://data.humdata.org/dataset/somalia-administrative-boundaries>
+#
+################################################################################
+"district_map"
+
