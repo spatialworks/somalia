@@ -87,6 +87,7 @@ NULL
 #' \item{\code{validTo}}{Date map is valid up to}
 #' \item{\code{Shape_Leng}}{Lenght of shape}
 #' \item{\code{Shape_Area}}{Shape of area}
+#' }
 #'
 #' @source Humanitarian Data Exchange <https://data.humdata.org/dataset/somalia-administrative-boundaries>
 #
@@ -117,6 +118,7 @@ NULL
 #' \item{\code{validTo}}{Date map is valid up to}
 #' \item{\code{Shape_Leng}}{Lenght of shape}
 #' \item{\code{Shape_Area}}{Shape of area}
+#' }
 #'
 #' @source Humanitarian Data Exchange <https://data.humdata.org/dataset/somalia-administrative-boundaries>
 #
