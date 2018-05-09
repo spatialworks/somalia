@@ -4,7 +4,22 @@
 \name{region_map}
 \alias{region_map}
 \title{region_map}
-\format{An object of class \code{SpatialPolygonsDataFrame} with 18 rows and 13 columns.}
+\format{A SpatialPolygonsDataFrame with 18 features:
+\describe{
+\item{\code{OBJECTID}}{Object identifier}
+\item{\code{admin1Name}}{Name of administrative level 1 (region)}
+\item{\code{admin1Pcod}}{Postal code of administrative level 1 (region)}
+\item{\code{admin1RefN}}{Reference name of administrative level 1 (region)}
+\item{\code{admin1AltN}}{Alternative name of administrative level 1 (region)}
+\item{\code{admin1Al_1}}{Alternative name of administrative level 1 (region)}
+\item{\code{admin0Name}}{Country (administrative level 0) name}
+\item{\code{admin0Pcod}}{Country (administrative level 1) code}
+\item{\code{date}}{Date map was poduced}
+\item{\code{validOn}}{Date map was last validated}
+\item{\code{validTo}}{Date map is valid up to}
+\item{\code{Shape_Leng}}{Lenght of shape}
+\item{\code{Shape_Area}}{Shape of area}
+}}
 \source{
 Humanitarian Data Exchange <https://data.humdata.org/dataset/somalia-administrative-boundaries>
 }
