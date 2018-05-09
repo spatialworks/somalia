@@ -73,6 +73,36 @@ devtools::use_data(villages)
 
 ################################################################################
 #
+# Livelihood zones maps
+#
+################################################################################
+#
+# Libraries for mapping
+#
+library(leaflet)
+library(rgdal)
+library(rgeos)
+library(raster)
+library(maps)
+#
+# Read map
+#
+lhz2015 <- readOGR(dsn = "data-raw/SO_LHZ_2015",
+                   layer = "SO_LHZ_2015",
+                   verbose = FALSE)
+#
+#
+#
+lhz2015$LZNAME <- str_replace(lhz2015$LZNAME, " – ", " ")
+lhz2015$LZNAME <- str_replace(lhz2015$LZNAME, "  ", " ")
+#
+#
+#
+devtools::use_data(lhz2015, overwrite = TRUE)
+
+
+################################################################################
+#
 # Pull data Humanitarian Data exchange: https://data.humdata.org using ckanr
 #
 ################################################################################
@@ -104,35 +134,3 @@ som <- ckanr::group_show(id = "som")
 x <- ckanr::package_show("administrative-regions-of-somalia")
 
 y <- ckanr::resource_show(x$resources[[1]]$id)
-
-
-
-################################################################################
-#
-# Livelihood zones maps
-#
-################################################################################
-#
-# Libraries for mapping
-#
-library(leaflet)
-library(rgdal)
-library(rgeos)
-library(raster)
-library(maps)
-#
-# Read map
-#
-lhz2015 <- readOGR(dsn = "data-raw/SO_LHZ_2015",
-                   layer = "SO_LHZ_2015",
-                   verbose = FALSE)
-#
-#
-#
-lhz2015$LZNAME <- str_replace(lhz2015$LZNAME, " – ", " ")
-lhz2015$LZNAME <- str_replace(lhz2015$LZNAME, "  ", " ")
-#
-#
-#
-devtools::use_data(lhz2015, overwrite = TRUE)
-
