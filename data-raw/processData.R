@@ -54,14 +54,14 @@ villagelist <- merge(admin1list, admin2list, by = "admin1name")
 # Admin 3 List
 #
 admin3list  <- villages[ , 13:17]
-names(admin3list) <- c("admin2name", "admin3name", "admin3id", "latitude", "longitude")
+names(admin3list) <- c("admin2name", "admin3name", "admin3id", "longitude", "latitude")
 
 
 villagelist <- merge(villagelist, admin3list, by = "admin2name")
 
 somaliavillages <- villagelist[, c("admin1pcode", "admin1id", "admin1name",
                                    "admin2id", "admin2name",
-                                   "admin3id", "admin3name", "latitude", "longitude")]
+                                   "admin3id", "admin3name", "longitude", "latitude")]
 
 somaliavillages$latitude  <- as.numeric(somaliavillages$latitude)
 somaliavillages$longitude <- as.numeric(somaliavillages$longitude)
@@ -71,8 +71,11 @@ somaliavillages$longitude <- as.numeric(somaliavillages$longitude)
 
 villages <- somaliavillages
 
-villages$longitude <- ifelse(villages$longitude > 40, villages$latitude, villages$longitude)
-villages$latitude  <- ifelse(villages$latitude < 10, villages$longitude, villages$latitude)
+longitude <- ifelse(villages$longitude < 20, villages$latitude, villages$longitude)
+latitude  <- ifelse(villages$latitude > 40, villages$longitude, villages$latitude)
+
+villages$latitude <- latitude
+villages$longitude <- longitude
 
 devtools::use_data(villages, overwrite = TRUE)
 
