@@ -110,27 +110,43 @@ devtools::use_data(lhz2015, overwrite = TRUE)
 # Setup ckan
 #
 ckanr::ckanr_setup(url = "https://data.humdata.org")
-#
-# Get the available packages for Somalia
-#
-packages <- ckanr::package_list()
-
-resources <- ckanr::resource_show()
-
-ckanr::resource_search(q = "*:*")
-
-tab <- ckanr::group_show(id = "som")
-
-
-x <- ckanr::package_search(q = "*:*")
-
-y <- ckanr::package_show(x$results[[1]])
-
-z <- ckanr::resource_show(y$resources[[1]]$id)
-
 
 som <- ckanr::group_show(id = "som")
 
 x <- ckanr::package_show("administrative-regions-of-somalia")
 
 y <- ckanr::resource_show(x$resources[[1]]$id)
+
+download.file(url = y$url, destfile = "data-raw/somalia_admin.zip")
+
+unzip("data-raw/somalia_admin.zip", exdir = "data-raw")
+
+
+################################################################################
+#
+# Administrative boundary maps
+#
+################################################################################
+#
+# Read region map
+#
+region_map <- readOGR(dsn = "data-raw/som_admbnda_adm1_undp",
+                      layer = "Som_Admbnda_Adm1_UNDP",
+                      verbose = FALSE)
+devtools::use_data(region_map, overwrite = TRUE)
+#
+# Read district map
+#
+district_map <- readOGR(dsn = "data-raw/som_admbnda_adm2_undp",
+                        layer = "Som_Admbnda_Adm2_UNDP",
+                        verbose = FALSE)
+devtools::use_data(district_map, overwrite = TRUE)
+
+
+
+
+
+
+
+
+
