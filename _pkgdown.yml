@@ -1,0 +1,8 @@
+title: somalia
+url: https://validmeasures.org/somalia
+template:
+  params:
+    bootswatch: simplex
+    #ganalytics: UA-102485058-4
+navbar:
+  type: inverse
