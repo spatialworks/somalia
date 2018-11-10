@@ -19,8 +19,8 @@
 \item{\code{date}}{Date map was poduced}
 \item{\code{validOn}}{Date map was last validated}
 \item{\code{validTo}}{Date map is valid up to}
-\item{\code{Shape_Leng}}{Lenght of shape}
-\item{\code{Shape_Area}}{Shape of area}
+\item{\code{Shape_Leng}}{Length of shape}
+\item{\code{Shape_Area}}{Area of shape}
 }}
 \source{
 Humanitarian Data Exchange <https://data.humdata.org/dataset/somalia-administrative-boundaries>
