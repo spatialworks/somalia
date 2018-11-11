@@ -54,7 +54,7 @@ villagelist <- merge(admin1list, admin2list, by = "admin1name")
 # Admin 3 List
 #
 admin3list  <- villages[ , 13:17]
-names(admin3list) <- c("admin2name", "admin3name", "admin3id", "longitude", "latitude")
+names(admin3list) <- c("admin2name", "admin3name", "admin3id", "latitude", "longitude")
 
 
 villagelist <- merge(villagelist, admin3list, by = "admin2name")
