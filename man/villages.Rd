@@ -13,8 +13,8 @@
 \item{\code{admin2name}}{Administrative level 2 name}
 \item{\code{admin3id}}{Administrative level 3 unique identifier}
 \item{\code{admin3name}}{Administrative level 3 name}
-\item{\code{latitude}}{Latitude coordinate in GPS format}
 \item{\code{longitude}}{Longitude coordinate in GPS format}
+\item{\code{latitude}}{Latitude coordinate in GPS format}
 }}
 \source{
 UNICEF Somalia
