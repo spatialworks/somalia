@@ -1,0 +1,105 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# somalia: Datasets for Use in Designing Surveys in Somalia <img src="man/figures/analytics.png" align="right" />
+
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![CRAN status](https://www.r-pkg.org/badges/version/somalia)](https://cran.r-project.org/package=somalia)
+[![Travis-CI Build Status](https://travis-ci.org/validmeasures/somalia.svg?branch=master)](https://travis-ci.org/validmeasures/somalia)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/somalia?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/somalia)
+
+Designing surveys require relevant datasets to be used as basis for sample size calculations, sampling design, survey planning/logistics and survey implementation. These include datasets on population, lists of sampling clusters, map datasets for spatial sampling, and previous survey datasets that can be used for estimating indicator variance and design effects. This package contains relevant datasets for use in designing surveys in Somalia.
+
+## Installation
+
+`somalia` is not yet released on [CRAN](https://cran.r-project.org).
+
+You can install the development version of `somalia` from [GitHub](https://github.com/validmeasures/somalia) with:
+
+```{r install, echo = TRUE, eval = FALSE}
+if(!require(devtools)) install.packages("devtools") 
+install_github("validmeasures/somalia")
+```
+
+## Usage
+
+The `somalia` package has the following datasets.
+
+### Somalia map datasets
+
+Four map datasets are included in the `somalia` pacakge. These are:
+
+* Administrative level 1 or region map of Somalia (`district_map`)
+
+* Administrative level 2 or district map of Somalia (`region_map`)
+
+* Livelihood zones map of Somalia (`lhz2015`)
+
+* Villages (with geographical coordinates) of Somalia (`villages`)
+
+The administrative level 1 or region map, administrative level 2 or district map and livelihoods zones map of Somalia are provided as a dataset class `SpatialPolygonsDataFrame`. These datasets are taken from the [Humanitarian Data Exchange](https://data.humdata.org/dataset/somalia-administrative-boundaries) in [ESRI Shapefile format](https://support.esri.com/en/white-paper/279) and then converted into `SpatialPolygonsDataFrame`.
+
+The villages of Somalia with geographical coordinates dataset is provided by [UNICEF Somalia](https://www.unicef.org/somalia/).
+
+### Accessing area information from map datasets
+
+Underlying area information for the regions, districts and livelihood zones of Somalia can be accessed from the `SpatialPolygonsDataFrame` as follows:
+
+```{r usage1, echo = TRUE, eval = FALSE}
+## Regions dataset
+somalia::region_map@data
+```
+
+```{r usage1a, echo = FALSE, eval = TRUE}
+## Regions dataset
+somalia::region_map@data[1:10, ]
+```
+
+```{r usage2, echo = TRUE, eval = FALSE}
+## Districts dataset
+somalia::district_map@data
+```
+
+```{r usage2a, echo = FALSE, eval = TRUE}
+## Districts dataset
+somalia::district_map@data[1:10, ]
+```
+
+```{r usage3, echo = TRUE, eval = FALSE}
+## Livelihoods zones dataset
+somalia::lhz2015@data
+```
+
+```{r usage3a, echo = FALSE, eval = TRUE}
+## Livelihoods zones dataset
+somalia::lhz2015@data[1:10, ]
+```
+
+### Plotting map datasets
+
+Map datasets can be mapped using the `plot()` function in the `sp` package. This is implemented as follows:
+
+1. Map of Districts of Somalia
+
+```{r usage4, echo = TRUE, eval = TRUE}
+sp::plot(somalia::district_map)
+```
+
+
+
+
+
+
+
