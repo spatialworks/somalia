@@ -91,15 +91,27 @@ somalia::lhz2015@data[1:10, ]
 
 Map datasets can be mapped using the `plot()` function in the `sp` package. This is implemented as follows:
 
-1. Map of Districts of Somalia
+1. Map of Regions of Somalia
 
-```{r usage4, echo = TRUE, eval = TRUE}
+```{r usage4, ecoh = TRUE, eval = TRUE}
+sp::plot(somalia::region_map)
+```
+
+2. Map of Districts of Somalia
+
+```{r usage5, echo = TRUE, eval = TRUE}
 sp::plot(somalia::district_map)
 ```
 
+3. Map of Livelihood Zones of Somalia
 
+```{r usage6, echo = TRUE, eval = TRUE}
+sp::plot(somalia::lhz2015)
+```
 
+4. Map of villages of Somalia
 
-
-
-
+```{r usage7, echo = TRUE, eval = TRUE}
+sp::plot(somalia::region_map)
+points(somalia::villages[ , c("longitude", "latitude")], pch = 20, cex = 0.1, col = "darkgreen")
+```
