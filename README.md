@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# somalia: Datasets for Use in Designing Surveys in Somalia <img src="man/figures/analytics.png" align="right" />
+# somalia: Datasets for Use in Designing Surveys in Somalia <img src="man/figures/somalia.png" width="200px" align="right" />
 
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
